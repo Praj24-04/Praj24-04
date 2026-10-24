@@ -18,16 +18,6 @@ $ systemctl status dreamerPraj
    Target: SDE roles that build real infrastructure, not glorified forms
 ```
 
-### `git log --graph --oneline`
-
-```text
-*   d3adb33 (HEAD -> main) vit-pune: B.Tech CS (AI) — scaling systems & adversarial ML
-|\  
-| * 7e57c0d (diploma) msbte: Computer Technology — bare metal, OS internals, no hand-holding
-|/  
-* 0000001 initial commit: wrote first script, realized breaking things is half the job
-```
-
 ### Client Nodes `[active_projects]`
 
 Projects reporting updates to the aggregation server:
@@ -82,8 +72,8 @@ $ cat ~/.contact
 ```
 
 * **GitHub:** [@Praj24-04](https://github.com/Praj24-04)
-* **LinkedIn:** `<!-- PASTE LINKEDIN URL HERE -->` [LinkedIn]()
-* **Email:** `<!-- PASTE EMAIL HERE -->` [Email](mailto:)
+* **LinkedIn:** `` [LinkedIn]()
+* **Email:** `` [Email](mailto:)
 
 ```text
 $ exit 0
