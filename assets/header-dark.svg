@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 85" fill="none">
+  <!-- dark mode: light text, green accents -->
+  <text x="10" y="30"
+        font-family="'Courier New',Courier,monospace"
+        font-size="16"
+        fill="#7ee787">$ whoami</text>
+  <text x="10" y="68"
+        font-family="'Courier New',Courier,monospace"
+        font-size="28"
+        font-weight="bold"
+        fill="#e6edf3">dreamerPraj</text>
+  <!-- blinking cursor -->
+  <rect x="200" y="46" width="15" height="26" rx="1" fill="#7ee787">
+    <animate attributeName="opacity"
+             values="1;1;0;0"
+             keyTimes="0;0.5;0.51;1"
+             dur="1.2s"
+             repeatCount="indefinite"/>
+  </rect>
+</svg>
