@@ -1,14 +1,14 @@
 name: Arcade (daily save)
 
-# Refreshes the high-score board, the "recently played" list and the
-# contribution snake, then commits the regenerated SVGs.
+# Refreshes the high-score board, the trivia, the "recently played" list and
+# the contribution snake, then commits the regenerated SVGs.
 on:
   schedule:
     - cron: "17 21 * * *" # 02:47 IST. Yes, that 2:47.
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["data/profile.json", "scripts/**", ".github/workflows/arcade.yml"]
+    paths: ["data/profile.json", "data/trivia.json", "scripts/**", ".github/workflows/arcade.yml"]
 
 permissions:
   contents: write

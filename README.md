@@ -12,12 +12,15 @@
   <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV. B.Tech CSE (AI) at VIT Pune. Built PolicyIQ, live in prod. Breaks ML models for science. Will debug for brownies. Press Start.">
 </p>
 
-**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed
+**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed · open to SDE / ML roles
 
-- I once taught a skin-cancer classifier to trust anything holding a ruler. Then I built the thing that catches people like me.
-- My screenshots have a search engine. Yours are in a graveyard.
-- I believe every system should assume its input is lying. This has made me great at ML security and insufferable at restaurants.
-- Runs on Python, TypeScript and brownies. Open to SDE / ML roles; bribes accepted in the third one.
+**Loading-screen trivia** <sub>(three new ones every night, served by a GitHub Action)</sub>
+
+<!--TRIVIA:START-->
+- Linus Torvalds started writing Git in April 2005. Within days it was tracking its own source code.
+- The QWERTY layout dates from 1870s typewriters. Your keyboard is older than the light bulb.
+- "Rubber duck debugging" is real advice from a 1999 book: explain your code to a duck, find the bug yourself.
+<!--TRIVIA:END-->
 
 <p align="center">
   <a href="https://policyiq.sanatanlabs.com/"><img src="assets/arcade/btn-policyiq.svg" height="36" alt="Play PolicyIQ (live site)"></a>

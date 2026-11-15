@@ -284,19 +284,38 @@ def credits():
     return svg(W, h, b, "Credits: thank you for playing. No cats were harmed. Several were fed.")
 
 
-def update_readme(s):
-    """Rewrite the block between the RECENT markers in README.md."""
-    readme = ROOT / "README.md"
-    start, end = "<!--RECENT:START-->", "<!--RECENT:END-->"
-    src = readme.read_text() if readme.exists() else ""
-    if start not in src or end not in src or not s.get("recent"):
-        return
-    lines = [
-        f'- **[{r["name"]}]({r["url"]})** · last save `{r["pushed"]}`' + (f'<br><sub>{r["description"]}</sub>' if r["description"] else "")
-        for r in s["recent"]
-    ]
+def replace_block(src, tag, lines):
+    """Swap the text between <!--TAG:START--> and <!--TAG:END-->."""
+    start, end = f"<!--{tag}:START-->", f"<!--{tag}:END-->"
+    if start not in src or end not in src or not lines:
+        return src
     head, rest = src.split(start, 1)
-    readme.write_text(head + start + "\n" + "\n".join(lines) + "\n" + end + rest.split(end, 1)[1])
+    return head + start + "\n" + "\n".join(lines) + "\n" + end + rest.split(end, 1)[1]
+
+
+def todays_trivia(s, count=3):
+    """Pick today's facts. Keyed on the save date so rebuilds on one day agree."""
+    import datetime as dt
+    facts = load("trivia.json")
+    try:
+        day = dt.date.fromisoformat(s.get("saved", "")).toordinal()
+    except ValueError:
+        day = 0
+    return [facts[(day * count + i) % len(facts)] for i in range(count)]
+
+
+def update_readme(s):
+    """Refresh the auto-updated text blocks in README.md."""
+    readme = ROOT / "README.md"
+    if not readme.exists():
+        return
+    src = readme.read_text()
+    src = replace_block(src, "TRIVIA", [f"- {fact}" for fact in todays_trivia(s)])
+    src = replace_block(src, "RECENT", [
+        f'- **[{r["name"]}]({r["url"]})** · last save `{r["pushed"]}`' + (f'<br><sub>{r["description"]}</sub>' if r["description"] else "")
+        for r in s.get("recent", [])
+    ])
+    readme.write_text(src)
 
 
 SECTIONS = [
