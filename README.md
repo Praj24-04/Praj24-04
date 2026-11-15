@@ -17,9 +17,9 @@
 **Loading-screen trivia** <sub>(three new ones every night, served by a GitHub Action)</sub>
 
 <!--TRIVIA:START-->
-- Linux runs every one of the world's 500 fastest supercomputers.
-- The first spam email went out in 1978 to about 400 people.
-- The inventor of the GIF says it's "jif", and the internet overruled him.
+- The first hard drive held 5 MB and weighed a tonne, so "heavy storage" wasn't a metaphor.
+- QWERTY is older than the light bulb, which makes it tech's longest-running legacy code.
+- Git was tracking its own source code within days, the most committed relationship in tech.
 <!--TRIVIA:END-->
 
 <p align="center">
