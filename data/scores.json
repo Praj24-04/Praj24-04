@@ -1,9 +1,9 @@
 {
   "saved": "2026-11-15",
-  "contributions": null,
-  "streak": null,
-  "repos": 9,
-  "stars": null,
+  "contributions": 172,
+  "streak": 4,
+  "repos": 8,
+  "stars": 5,
   "followers": 5,
   "wpm": null,
   "recent": [
@@ -16,14 +16,14 @@
     {
       "name": "ss_graveyard",
       "url": "https://github.com/Praj24-04/ss_graveyard",
-      "description": "Your screenshots aren't a gallery, they're a graveyard: dig them up with OCR + AI and let them haunt you at the right time.",
+      "description": "a graveyard is only creepy if nobody remembers who\u2019s buried there! your screenshots aren't a gallery, they're a graveyard. lets dig them up, read them with OCR + AI, figure out why you saved them, and let em haunt you at the right time;)",
       "pushed": "2026-11-01"
     },
     {
-      "name": "GSC26-Challenge1-004",
-      "url": "https://github.com/Praj24-04/GSC26-Challenge1-004",
-      "description": "Backdoor Attacks Federated Learning",
-      "pushed": "2026-10-30"
+      "name": "POLICYIQ",
+      "url": "https://github.com/Praj24-04/POLICYIQ",
+      "description": "topological regulatory intelligence & MCDA recommendation engine. 934 global frameworks mapped across 27 nations via Legal-BERT bi-encoders, 50-D UMAP manifolds, HDBSCAN density clustering & MS-Marco cross-encoder attention.",
+      "pushed": "2026-10-24"
     }
   ]
 }
