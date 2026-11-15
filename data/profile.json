@@ -1,0 +1,100 @@
+{
+  "login": "Praj24-04",
+  "first_name": "PRAJAKTA",
+  "last_name": "JADHAV",
+  "taglines": [
+    "B.TECH CSE (AI) @ VIT PUNE",
+    "SOLE DEV OF POLICYIQ - LIVE",
+    "CGPA 9.07 + 1 PATENT FILED",
+    "WILL DEBUG FOR BROWNIES"
+  ],
+  "player": {
+    "class": "AI ENGINEER (B.TECH CSE-AI)",
+    "guild": "VIT PUNE",
+    "year": 3,
+    "years_total": 4,
+    "cgpa": 9.07,
+    "quest": "POLICYIQ - LIVE IN PROD",
+    "rare": "1 PATENT FILED",
+    "mode": "SOLO DEV, CO-OP FRIENDLY"
+  },
+  "world": [
+    {
+      "name": "POLICYIQ",
+      "status": "boss"
+    },
+    {
+      "name": "TROJANMOLE",
+      "status": "cleared"
+    },
+    {
+      "name": "SS_GRAVEYARD",
+      "status": "cleared"
+    },
+    {
+      "name": "AR TRY-ON",
+      "status": "cleared"
+    },
+    {
+      "name": "CIVIC-KALKI",
+      "status": "current"
+    },
+    {
+      "name": "YOUR TEAM?",
+      "status": "locked"
+    }
+  ],
+  "trophies": [
+    [
+      "POLICYIQ",
+      "SHIPPED SOLO",
+      "LIVE IN PROD"
+    ],
+    [
+      "PATENT",
+      "FILED",
+      "IP UNLOCKED"
+    ],
+    [
+      "CGPA 9.07",
+      "OUT OF 10",
+      "VIT PUNE"
+    ],
+    [
+      "934 X 27",
+      "FRAMEWORKS X",
+      "NATIONS"
+    ]
+  ],
+  "inventory": {
+    "WEAPONS": [
+      "PYTHON",
+      "TYPESCRIPT",
+      "JAVASCRIPT",
+      "HTML/CSS"
+    ],
+    "SPELLBOOK": [
+      "PYTORCH",
+      "TRANSFORMERS",
+      "LEGAL-BERT",
+      "UMAP",
+      "HDBSCAN",
+      "FEDERATED LEARNING",
+      "GEMINI API"
+    ],
+    "GEAR": [
+      "FASTAPI",
+      "REACT NATIVE",
+      "EXPO",
+      "GIT",
+      "GITHUB ACTIONS"
+    ]
+  },
+  "buttons": {
+    "linkedin": "LINKEDIN",
+    "email": "EMAIL",
+    "portfolio": "PORTFOLIO (WIP)",
+    "policyiq": "PLAY POLICYIQ >",
+    "coin": "INSERT COIN"
+  }
+}

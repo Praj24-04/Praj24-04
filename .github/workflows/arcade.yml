@@ -1,0 +1,51 @@
+name: Arcade (daily save)
+
+# Refreshes the high-score board, the "recently played" list and the
+# contribution snake, then commits the regenerated SVGs.
+on:
+  schedule:
+    - cron: "17 21 * * *" # 02:47 IST. Yes, that 2:47.
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["data/profile.json", "scripts/**", ".github/workflows/arcade.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arcade-save
+  cancel-in-progress: false
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch scores
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MONKEYTYPE_APE_KEY: ${{ secrets.MONKEYTYPE_APE_KEY }} # optional
+        run: python3 scripts/fetch_scores.py
+
+      - name: Draw the contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/arcade/snake-light.svg?color_snake=#b13e53&color_dots=#e8edf2,#a7f070,#38b764,#257179,#29366f
+            assets/arcade/snake-dark.svg?color_snake=#ef7d57&color_dots=#333c57,#257179,#38b764,#a7f070,#ffcd75
+
+      - name: Render pixel art
+        run: python3 scripts/build.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data assets
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(arcade): daily save"
+          git pull --rebase
+          git push

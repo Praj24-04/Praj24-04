@@ -1,0 +1,29 @@
+{
+  "saved": "2026-11-15",
+  "contributions": null,
+  "streak": null,
+  "repos": 9,
+  "stars": null,
+  "followers": 5,
+  "wpm": null,
+  "recent": [
+    {
+      "name": "trojanMole",
+      "url": "https://github.com/Praj24-04/trojanMole",
+      "description": "A benchmark testbed for evaluating backdoor resilience and adversarial robustness in federated skin lesion vision models.",
+      "pushed": "2026-11-01"
+    },
+    {
+      "name": "ss_graveyard",
+      "url": "https://github.com/Praj24-04/ss_graveyard",
+      "description": "Your screenshots aren't a gallery, they're a graveyard: dig them up with OCR + AI and let them haunt you at the right time.",
+      "pushed": "2026-11-01"
+    },
+    {
+      "name": "GSC26-Challenge1-004",
+      "url": "https://github.com/Praj24-04/GSC26-Challenge1-004",
+      "description": "Backdoor Attacks Federated Learning",
+      "pushed": "2026-10-30"
+    }
+  ]
+}
