@@ -110,7 +110,7 @@ def title_screen(p, facts):
     for word, y in ((p["first_name"], 40), (p["last_name"], 112)):
         b += text(word, W // 2 + 5, y + 5, 9, PLUM, "middle")
         b += text(word, W // 2, y, 9, "url(#lg)", "middle")
-    b += typed_facts(facts, 192, 3, CYAN)
+    b += typed_facts(facts, 197, 2.5, CYAN)
     b += text("PRESS START", W // 2, 258, 2, YELLOW, "middle", extra=' class="blink"')
     b += ground(290, 50)
     b += f'<g class="bob">{sprite(CUPCAKE, CUPCAKE_COLORS, 48, 252, 3)}</g>'
