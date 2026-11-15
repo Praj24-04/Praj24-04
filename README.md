@@ -17,9 +17,9 @@
 **Loading-screen trivia** <sub>(three new ones every night, served by a GitHub Action)</sub>
 
 <!--TRIVIA:START-->
-- Linus Torvalds started writing Git in April 2005. Within days it was tracking its own source code.
-- The QWERTY layout dates from 1870s typewriters. Your keyboard is older than the light bulb.
-- "Rubber duck debugging" is real advice from a 1999 book: explain your code to a duck, find the bug yourself.
+- Linux runs every one of the world's 500 fastest supercomputers.
+- The first spam email went out in 1978 to about 400 people.
+- The inventor of the GIF says it's "jif", and the internet overruled him.
 <!--TRIVIA:END-->
 
 <p align="center">
