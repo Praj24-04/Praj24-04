@@ -34,35 +34,64 @@ def ground(y, h):
     return out
 
 
-def typed_lines(lines, y, scale, fill):
-    """Typewriter effect: SMIL animates a clip rect one character at a time."""
-    slot, type_time = 4.0, 1.5
-    total = slot * len(lines)
+TYPE_COLS = 33  # characters per typed line at scale 3
+
+
+def wrap(fact, cols=TYPE_COLS):
+    """One line if it fits, else the most balanced two-line split."""
+    if len(fact) <= cols:
+        return [fact]
+    words = fact.split()
+    splits = [(" ".join(words[:i]), " ".join(words[i:])) for i in range(1, len(words))]
+    return list(min(splits, key=lambda ab: max(len(ab[0]), len(ab[1]))))
+
+
+def todays_trivia(s, count=6):
+    """Tonight's facts for the title screen. Keyed on the save date so every
+    rebuild on the same day agrees; facts too long for two lines are skipped."""
+    import datetime as dt
+    facts = [f for f in load("trivia.json") if len(wrap(f)) <= 2 and max(map(len, wrap(f))) <= TYPE_COLS]
+    try:
+        day = dt.date.fromisoformat(s.get("saved", "")).toordinal()
+    except ValueError:
+        day = 0
+    return [facts[(day * count + i) % len(facts)] for i in range(min(count, len(facts)))]
+
+
+def typed_facts(facts, y, scale, fill):
+    """Typewriter effect: SMIL widens a clip rect one character at a time.
+    Each fact gets a time slot; its second line starts when the first is done."""
+    slot, per_char, line_h = 7.0, 0.04, (CHAR_H + 2) * scale
+    total = slot * len(facts)
     out = ""
-    for i, line in enumerate(lines):
-        n = len(line)
-        w = text_width(line, scale)
-        x0 = (W - w) // 2
-        start = i * slot
-        times, values = [0.0], [0]
-        for c in range(1, n + 1):
-            times.append(start + 0.2 + type_time * c / n)
-            values.append(c * ADVANCE * scale)
-        times.append(start + slot - 0.25)
-        values.append(0)
-        kt = ";".join(f"{min(t / total, 1):.4f}" for t in times)
-        vs = ";".join(str(v) for v in values)
-        out += (
-            f'<clipPath id="ty{i}"><rect x="{x0}" y="{y}" width="0" height="{CHAR_H * scale}">'
-            f'<animate attributeName="width" calcMode="discrete" dur="{total}s" '
-            f'repeatCount="indefinite" keyTimes="{kt}" values="{vs}"/></rect></clipPath>'
-            f'<g clip-path="url(#ty{i})">{text(line, x0, y, scale, fill)}</g>'
-        )
+    for i, fact in enumerate(facts):
+        lines = wrap(fact)
+        y0 = y + (line_h // 2 if len(lines) == 1 else 0)  # centre one-liners
+        t = i * slot + 0.3
+        for j, line in enumerate(lines):
+            w = text_width(line, scale)
+            x0 = (W - w) // 2
+            times, values = [0.0], [0]
+            for c in range(1, len(line) + 1):
+                t += per_char
+                times.append(t)
+                values.append(c * ADVANCE * scale)
+            times.append((i + 1) * slot - 0.3)
+            values.append(0)
+            kt = ";".join(f"{min(v / total, 1):.4f}" for v in times)
+            vs = ";".join(map(str, values))
+            ly = y0 + j * line_h
+            out += (
+                f'<clipPath id="ty{i}_{j}"><rect x="{x0}" y="{ly}" width="0" height="{CHAR_H * scale}">'
+                f'<animate attributeName="width" calcMode="discrete" dur="{total}s" '
+                f'repeatCount="indefinite" keyTimes="{kt}" values="{vs}"/></rect></clipPath>'
+                f'<g clip-path="url(#ty{i}_{j})">{text(line, x0, ly, scale, fill)}</g>'
+            )
     return out
 
 
 # --- screens ----------------------------------------------------------------
-def title_screen(p):
+def title_screen(p, facts):
     h = 340
     b = stars(W, 290, 46)
     # HUD. 1P score = CGPA; HI score = 934 frameworks x 27 nations (PolicyIQ).
@@ -78,18 +107,18 @@ def title_screen(p):
         + "</linearGradient>"
     )
     b += f"<defs>{grad}</defs>"
-    for word, y in ((p["first_name"], 48), (p["last_name"], 122)):
+    for word, y in ((p["first_name"], 40), (p["last_name"], 112)):
         b += text(word, W // 2 + 5, y + 5, 9, PLUM, "middle")
         b += text(word, W // 2, y, 9, "url(#lg)", "middle")
-    b += typed_lines(p["taglines"], 204, 3, CYAN)
-    b += text("PRESS START", W // 2, 244, 3, YELLOW, "middle", extra=' class="blink"')
+    b += typed_facts(facts, 192, 3, CYAN)
+    b += text("PRESS START", W // 2, 258, 2, YELLOW, "middle", extra=' class="blink"')
     b += ground(290, 50)
     b += f'<g class="bob">{sprite(CUPCAKE, CUPCAKE_COLORS, 48, 252, 3)}</g>'
     b += sprite(CUPCAKE, CUPCAKE_COLORS, 96, 266, 3)
     b += cat(548, 242, 3)
     b += rect(96, 310, W - 192, 26, TEAL) + text("(C) 2026 PRAJ24-04 - ALL BUGS RESERVED", W // 2, 316, 2, WHITE, "middle")
     name = f'{p["first_name"]} {p["last_name"]}'.title()
-    return svg(W, h, b, f"Title screen: {name}. {'. '.join(t.title() for t in p['taglines'][:3])}. Press Start.")
+    return svg(W, h, b, f"Title screen: {name}. Tonight's tech trivia, typed out one at a time: {' '.join(facts)} Press Start.")
 
 
 def header(title, n, total):
@@ -293,24 +322,12 @@ def replace_block(src, tag, lines):
     return head + start + "\n" + "\n".join(lines) + "\n" + end + rest.split(end, 1)[1]
 
 
-def todays_trivia(s, count=3):
-    """Pick today's facts. Keyed on the save date so rebuilds on one day agree."""
-    import datetime as dt
-    facts = load("trivia.json")
-    try:
-        day = dt.date.fromisoformat(s.get("saved", "")).toordinal()
-    except ValueError:
-        day = 0
-    return [facts[(day * count + i) % len(facts)] for i in range(count)]
-
-
 def update_readme(s):
     """Refresh the auto-updated text blocks in README.md."""
     readme = ROOT / "README.md"
     if not readme.exists():
         return
     src = readme.read_text()
-    src = replace_block(src, "TRIVIA", [f"- {fact}" for fact in todays_trivia(s)])
     src = replace_block(src, "RECENT", [
         f'- **[{r["name"]}]({r["url"]})** · last save `{r["pushed"]}`' + (f'<br><sub>{r["description"]}</sub>' if r["description"] else "")
         for r in s.get("recent", [])
@@ -327,7 +344,7 @@ SECTIONS = [
 
 def main():
     p, s, v = load("profile.json"), load("scores.json"), load("visitors.json")
-    write("title.svg", title_screen(p))
+    write("title.svg", title_screen(p, todays_trivia(s)))
     for i, (slug, name) in enumerate(SECTIONS, 1):
         write(f"h-{slug}.svg", header(name, i, len(SECTIONS)))
     write("player.svg", player_card(p))

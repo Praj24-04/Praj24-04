@@ -9,18 +9,10 @@
 -->
 
 <p align="center">
-  <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV. B.Tech CSE (AI) at VIT Pune. Built PolicyIQ, live in prod. Breaks ML models for science. Will debug for brownies. Press Start.">
+  <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV, with tech trivia typing itself out one line at a time (a new set every night), a pixel cat in a chef's hat, and a blinking Press Start.">
 </p>
 
 **Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed · open to SDE / ML roles
-
-**Loading-screen trivia** <sub>(three new ones every night, served by a GitHub Action)</sub>
-
-<!--TRIVIA:START-->
-- The first hard drive held 5 MB and weighed a tonne, so "heavy storage" wasn't a metaphor.
-- QWERTY is older than the light bulb, which makes it tech's longest-running legacy code.
-- Git was tracking its own source code within days, the most committed relationship in tech.
-<!--TRIVIA:END-->
 
 <p align="center">
   <a href="https://policyiq.sanatanlabs.com/"><img src="assets/arcade/btn-policyiq.svg" height="36" alt="Play PolicyIQ (live site)"></a>
