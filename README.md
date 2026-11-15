@@ -12,7 +12,7 @@
   <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV, with tech trivia typing itself out one line at a time (a new set every night), a pixel cat in a chef's hat, and a blinking Press Start.">
 </p>
 
-**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed · open to SDE / ML roles
+**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed · open to creative tech roles.
 
 <p align="center">
   <a href="https://policyiq.sanatanlabs.com/"><img src="assets/arcade/btn-policyiq.svg" height="36" alt="Play PolicyIQ (live site)"></a>
