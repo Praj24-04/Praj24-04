@@ -1,6 +1,14 @@
 {
-  "coins": 1,
+  "coins": 2,
   "players": [
-    {"initials": "BIS", "date": "2026-11-15"}
+    {
+      "initials": "BIS",
+      "date": "2026-11-15"
+    },
+    {
+      "initials": "PRA",
+      "user": "Praj24-04",
+      "date": "2026-11-15"
+    }
   ]
 }
