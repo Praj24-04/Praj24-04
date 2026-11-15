@@ -111,7 +111,7 @@ def player_card(p):
     rows = [
         ("CLASS", pl["class"]), ("GUILD", pl["guild"]),
         ("LEVEL", f'{pl["year"]} / {pl["years_total"]}'), ("HP", f'{pl["cgpa"]:.2f} / 10'),
-        ("QUEST", pl["quest"]), ("RARE", pl["rare"]), ("MODE", pl["mode"]),
+        ("SKILL", pl["skill"]), ("WEAK TO", pl["weak"]), ("FUEL", pl["fuel"]),
     ]
     for i, (k, v) in enumerate(rows):
         y = 60 + i * 23
@@ -177,10 +177,15 @@ def trophy_room(p):
     n = len(p["trophies"])
     for i, (a, c, d) in enumerate(p["trophies"]):
         cx = W // n * i + W // n // 2
-        b += f'<g class="bob" style="animation-delay:{i * 0.3}s">{sprite(TROPHY, TROPHY_COLORS, cx - 20, 20, 4)}</g>'
         b += rect(cx - 62, 70, 124, 4, SLATE) + rect(cx - 54, 74, 108, 4, DUSK)
+        if a == "???":  # empty pedestal: a dim outline waiting for the next win
+            b += sprite(TROPHY, {"Y": DUSK, "W": DUSK, "O": DUSK}, cx - 20, 23, 4)
+            b += text(a, cx, 90, 2, SLATE, "middle", extra=' class="blink"') + text(c, cx, 110, 2, SLATE, "middle") + text(d, cx, 130, 2, SLATE, "middle")
+            continue
+        b += f'<g class="bob" style="animation-delay:{i * 0.3}s">{sprite(TROPHY, TROPHY_COLORS, cx - 20, 20, 4)}</g>'
         b += text(a, cx, 90, 2, YELLOW, "middle") + text(c, cx, 110, 2, WHITE, "middle") + text(d, cx, 130, 2, MIST, "middle")
-    b += text(f"TROPHIES {n}/?? - MORE DLC INCOMING", W // 2, 160, 2, SLATE, "middle")
+    won = sum(t[0] != "???" for t in p["trophies"])
+    b += text(f"TROPHIES {won}/?? - MORE DLC INCOMING", W // 2, 160, 2, SLATE, "middle")
     return svg(W, h, b, "Trophy room: " + "; ".join(" ".join(t).title() for t in p["trophies"]) + ".")
 
 

@@ -4,8 +4,8 @@
   "last_name": "JADHAV",
   "taglines": [
     "B.TECH CSE (AI) @ VIT PUNE",
-    "SOLE DEV OF POLICYIQ - LIVE",
-    "CGPA 9.07 + 1 PATENT FILED",
+    "BUILT POLICYIQ - LIVE IN PROD",
+    "BREAKS ML MODELS FOR SCIENCE",
     "WILL DEBUG FOR BROWNIES"
   ],
   "player": {
@@ -14,9 +14,9 @@
     "year": 3,
     "years_total": 4,
     "cgpa": 9.07,
-    "quest": "POLICYIQ - LIVE IN PROD",
-    "rare": "1 PATENT FILED",
-    "mode": "SOLO DEV, CO-OP FRIENDLY"
+    "skill": "MAKES MODELS DISTRUST INPUTS",
+    "weak": "'JUST ONE MORE TEST RUN'",
+    "fuel": "BROWNIES (SELF-BAKED)"
   },
   "world": [
     {
@@ -47,7 +47,7 @@
   "trophies": [
     [
       "POLICYIQ",
-      "SHIPPED SOLO",
+      "SHIPPED",
       "LIVE IN PROD"
     ],
     [
@@ -56,14 +56,14 @@
       "IP UNLOCKED"
     ],
     [
-      "CGPA 9.07",
-      "OUT OF 10",
-      "VIT PUNE"
+      "IEEE GSC26",
+      "NO FINALS",
+      "FULL XP"
     ],
     [
-      "934 X 27",
-      "FRAMEWORKS X",
-      "NATIONS"
+      "???",
+      "NEXT WIN",
+      "LOADING"
     ]
   ],
   "inventory": {

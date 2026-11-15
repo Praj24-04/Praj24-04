@@ -9,14 +9,15 @@
 -->
 
 <p align="center">
-  <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV. B.Tech CSE (AI) at VIT Pune. Sole developer of PolicyIQ, live. CGPA 9.07, one patent filed. Press Start.">
+  <img src="assets/arcade/title.svg" width="100%" alt="Title screen: PRAJAKTA JADHAV. B.Tech CSE (AI) at VIT Pune. Built PolicyIQ, live in prod. Breaks ML models for science. Will debug for brownies. Press Start.">
 </p>
 
-**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07**
+**Prajakta Jadhav** · third-year B.Tech CSE (AI) at VIT Pune · CGPA **9.07** · 1 patent filed
 
-- Sole developer of **[PolicyIQ](https://policyiq.sanatanlabs.com/)**, a deployed, industry-sponsored AI policy-intelligence platform (934 regulatory frameworks, 27 nations).
-- **Patent filed.** <!-- TODO(you): add the title or application no. once you can share it, e.g. "(Application No. 2026XXXXXXXX)" -->
-- I like ML security and systems that survive contact with bad inputs. Looking for SDE / ML roles.
+- I once taught a skin-cancer classifier to trust anything holding a ruler. Then I built the thing that catches people like me.
+- My screenshots have a search engine. Yours are in a graveyard.
+- I believe every system should assume its input is lying. This has made me great at ML security and insufferable at restaurants.
+- Runs on Python, TypeScript and brownies. Open to SDE / ML roles; bribes accepted in the third one.
 
 <p align="center">
   <a href="https://policyiq.sanatanlabs.com/"><img src="assets/arcade/btn-policyiq.svg" height="36" alt="Play PolicyIQ (live site)"></a>
@@ -28,17 +29,15 @@
 
 <img src="assets/arcade/h-player-select.svg" width="100%" alt="PLAYER SELECT">
 
-<img src="assets/arcade/player.svg" width="100%" alt="Player card. Class: AI Engineer (B.Tech CSE-AI). Guild: VIT Pune. Level: year 3 of 4. HP: CGPA 9.07 of 10. Quest: PolicyIQ, live in prod. Rare item: 1 patent filed. Mode: solo dev, co-op friendly.">
+<img src="assets/arcade/player.svg" width="100%" alt="Player card. Class: AI Engineer (B.Tech CSE-AI). Guild: VIT Pune. Level: year 3 of 4. HP: CGPA 9.07 of 10. Skill: makes models distrust inputs. Weak to: 'just one more test run'. Fuel: brownies, self-baked.">
 
 The HP bar is my actual CGPA and the level is my actual year. No stat on this page is a vibes-based percentage: you won't find "Python: 87%" here, because nobody knows what that means, including the people who write it.
-
-**Play style:** I pick problems where the input might be lying. A skin-lesion classifier that gets fooled by a ruler. Policy documents from 27 countries that all say "data" and mean different things. A camera roll with 4,000 screenshots and no memory of why.
 
 <br>
 
 <img src="assets/arcade/h-main-quest.svg" width="100%" alt="MAIN QUEST">
 
-### PolicyIQ · boss fight, cleared solo
+### PolicyIQ · boss fight, cleared
 
 **[▶ Play it live](https://policyiq.sanatanlabs.com/)** · **[Source](https://github.com/Praj24-04/POLICYIQ)**
 
@@ -46,7 +45,7 @@ Regulation is a dungeon with no map. PolicyIQ draws the map: it reads 934 regula
 
 | | |
 |---|---|
-| **My role** | Sole developer. Data pipeline, models, backend, frontend, deployment. Industry-sponsored. |
+| **My role** | Developer. Industry-sponsored. <!-- TODO(you): name the parts you built, e.g. "embedding pipeline, clustering, API" --> |
 | **How it works** | Legal-BERT bi-encoders embed every framework → 50-D UMAP manifold → HDBSCAN density clustering → MS-MARCO cross-encoder re-ranking → MCDA recommendation engine. |
 | **Status** | Deployed. Not a notebook, not a demo video. |
 
@@ -89,13 +88,10 @@ Only items I've actually used in a shipped repo. The rest of the shop is still o
 
 <img src="assets/arcade/h-trophy-room.svg" width="100%" alt="TROPHY ROOM">
 
-<img src="assets/arcade/trophies.svg" width="100%" alt="Trophies: PolicyIQ shipped solo and live in prod. Patent filed. CGPA 9.07 out of 10 at VIT Pune. 934 frameworks across 27 nations mapped.">
+<img src="assets/arcade/trophies.svg" width="100%" alt="Trophies: PolicyIQ, shipped and live in prod. Patent filed. IEEE GSC26: no finals, full XP. One empty pedestal for the next win.">
 
-- 🏆 **Shipped to production, solo.** PolicyIQ is live and industry-sponsored.
-- 🏆 **Patent filed.** Details are in a locked chest until the paperwork says otherwise.
-- 🏆 **CGPA 9.07 / 10** so far, in B.Tech CSE (AI) at VIT Pune.
-- 🥈 **Participation medal, worn proudly:** IEEE CS Global Student Challenge 2026. Competed with my team, wasn't selected for finals, kept [the repo](https://github.com/Praj24-04/GSC26-Challenge3-004) public anyway. Some bosses you fight for the XP.
-<!-- TODO(you): add hackathon wins, public-speaking awards, scholarships. One line each. -->
+<sub>Shelf notes: the patent stays in a locked chest until the paperwork says otherwise. <!-- TODO(you): add title / application no. when shareable --> The IEEE CS Global Student Challenge 2026 medal is for a boss my team didn't beat; <a href="https://github.com/Praj24-04/GSC26-Challenge3-004">the repo</a> stays public anyway. The fourth pedestal is not a rendering bug.</sub>
+<!-- TODO(you): new win? Replace the "???" entry in data/profile.json "trophies" and run python3 scripts/build.py -->
 
 <br>
 
@@ -178,9 +174,7 @@ Progress saved. This is the part where you write to me before the next cutscene.
   <img src="assets/arcade/btn-portfolio.svg" height="36" alt="Portfolio: level under construction">
 </p>
 
-- **LinkedIn:** [prajakta-j](https://www.linkedin.com/in/prajakta-j-015324331)
-- **Email:** [jprajakta017@gmail.com](mailto:jprajakta017@gmail.com)
-- **Portfolio:** level under construction. The cat is supervising.
+<p align="center"><sub><a href="mailto:jprajakta017@gmail.com">jprajakta017@gmail.com</a> · portfolio level under construction, the cat is supervising</sub></p>
 
 <br>
 
