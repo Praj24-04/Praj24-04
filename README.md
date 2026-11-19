@@ -68,7 +68,7 @@ Regulation is a dungeon with no map. PolicyIQ draws the map: it reads 934 regula
 <!--RECENT:START-->
 - **[trojanMole](https://github.com/Praj24-04/trojanMole)** · last save `2026-11-01`<br><sub>A benchmark testbed for evaluating backdoor resilience and adversarial robustness in federated skin lesion vision models.</sub>
 - **[ss_graveyard](https://github.com/Praj24-04/ss_graveyard)** · last save `2026-11-01`<br><sub>a graveyard is only creepy if nobody remembers who’s buried there! your screenshots aren't a gallery, they're a graveyard. lets dig them up, read them with OCR + AI, figure out why you saved them, and let em haunt you at the right time;)</sub>
-- **[POLICYIQ](https://github.com/Praj24-04/POLICYIQ)** · last save `2026-10-24`<br><sub>topological regulatory intelligence & MCDA recommendation engine. 934 global frameworks mapped across 27 nations via Legal-BERT bi-encoders, 50-D UMAP manifolds, HDBSCAN density clustering & MS-Marco cross-encoder attention.</sub>
+- **[SANKALP-MPLAD](https://github.com/Praj24-04/SANKALP-MPLAD)** · last save `2026-08-31`
 <!--RECENT:END-->
 
 <br>

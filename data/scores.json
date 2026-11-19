@@ -1,9 +1,9 @@
 {
-  "saved": "2026-11-18",
+  "saved": "2026-11-19",
   "contributions": 174,
   "streak": 4,
-  "repos": 8,
-  "stars": 5,
+  "repos": 7,
+  "stars": 3,
   "followers": 6,
   "wpm": null,
   "recent": [
@@ -20,10 +20,10 @@
       "pushed": "2026-11-01"
     },
     {
-      "name": "POLICYIQ",
-      "url": "https://github.com/Praj24-04/POLICYIQ",
-      "description": "topological regulatory intelligence & MCDA recommendation engine. 934 global frameworks mapped across 27 nations via Legal-BERT bi-encoders, 50-D UMAP manifolds, HDBSCAN density clustering & MS-Marco cross-encoder attention.",
-      "pushed": "2026-10-24"
+      "name": "SANKALP-MPLAD",
+      "url": "https://github.com/Praj24-04/SANKALP-MPLAD",
+      "description": "",
+      "pushed": "2026-08-31"
     }
   ]
 }
